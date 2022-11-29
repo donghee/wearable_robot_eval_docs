@@ -9,7 +9,8 @@ description: docker를 이용하여 웨어러블 로봇 평가를 위한 ROS 패
 * Ubuntu 20.04 또는 Ubuntu 22.04
 * Docker 설치
 * Gazebo 3D 시뮬레이터 원활히 작동 하는 환경
-*
+
+
 
 설치 순서
 
