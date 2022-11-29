@@ -1,5 +1,15 @@
 # human 모델 제어기 추가
 
+
+
+###
+
+###
+
+### human 모델 Gazebo에 추가
+
+### - 66 dofs human 모델: [https://github.com/donghee/wearable\_robot\_eval/blob/main/wearable\_robot\_description/urdf/human\_66dof.xacro](https://github.com/donghee/wearable\_robot\_eval/blob/main/wearable\_robot\_description/urdf/human\_66dof.xacro)
+
 ### Position 컨트롤러와 토크 컨트롤러 추가
 
 * 휴먼 모델 position 컨트롤러 추가&#x20;

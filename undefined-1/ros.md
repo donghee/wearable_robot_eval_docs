@@ -2,21 +2,22 @@
 description: docker를 이용하여 웨어러블 로봇 평가를 위한 ROS 패키지 설치
 ---
 
-# 웨어러블 로봇 평가 시스템 환경 구성
+# ROS 패키지 개발 환경 구성
 
-### 요구사항
+요구사항
 
 * Ubuntu 20.04 또는 Ubuntu 22.04
 * Docker 설치
 * Gazebo 3D 시뮬레이터 원활히 작동 하는 환경
+*
 
-### 설치 순서
+설치 순서
 
 1\. Ubuntu 20.04 또는 Ubuntu 22.04 설치
 
 2\. Docker 설치
 
-3\. ROS2 foxy 실행&#x20;
+3\. ROS2 foxy 실행 (다음 명령 참고)
 
 ```
 xhost +local:root
@@ -37,7 +38,7 @@ docker run -it \
     bash
 ```
 
-4\. 도커 컨테이너에서 다음 명령 실행하여 필요한 패키지 설치
+4\. 도커 컨테이너 안에 다음 패키지 설치
 
 ```
 sudo apt install ros-foxy-gazebo-dev ros-foxy-gazebo-plugins ros-foxy-gazebo-msgs ros-foxy-gazebo-ros-pkgs ros-foxy-gazebo-ros ros-foxy-ros-core ros-foxy-geometry2

@@ -4,7 +4,7 @@ description: gazebo에서 사용할 수 있는 인간 모델 조사
 
 # human  모델 조사
 
-### URDF human을 모델링&#x20;
+### URDF를 이용하여 human 모델링한 사례&#x20;
 
 * 관절이 있는 타입: human-gazebo, 사람의 관절을 link와 joint를 구성
   * [https://github.com/robotology/human-gazebo/tree/master/humanSubject01](https://github.com/robotology/human-gazebo/tree/master/humanSubject01)&#x20;
