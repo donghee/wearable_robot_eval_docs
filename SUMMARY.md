@@ -21,7 +21,7 @@
 
 ## 개발환경 설정 <a href="#setup" id="setup"></a>
 
-* [ROS 패키지 개발 환경 구성](undefined-1/ros.md)
+* [웨어러블 로봇 평가 시스템 환경 구성](setup/undefined.md)
 
 ## 참고 <a href="#reference" id="reference"></a>
 
