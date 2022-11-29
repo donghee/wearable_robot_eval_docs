@@ -15,13 +15,13 @@ description: gazebo에서 사용할 수 있는 인간 모델 조사
 
 ### human gazebo
 
-{% embed url="https://user-images.githubusercontent.com/35487806/84712016-e2377900-af67-11ea-8c5e-8a7084f474a7.png" %}
+<figure><img src="https://user-images.githubusercontent.com/35487806/84712016-e2377900-af67-11ea-8c5e-8a7084f474a7.png" alt=""><figcaption></figcaption></figure>
 
 #### human gazebo udf 생성기(파이썬)
 
 [https://github.com/ami-iit/human-model-generator](https://github.com/ami-iit/human-model-generator)
 
-{% embed url="https://user-images.githubusercontent.com/10923418/129881033-4b926fa2-993c-4b92-b4af-f1f768940d56.png" %}
+<figure><img src="https://user-images.githubusercontent.com/10923418/129881033-4b926fa2-993c-4b92-b4af-f1f768940d56.png" alt=""><figcaption></figcaption></figure>
 
 #### human Model
 
