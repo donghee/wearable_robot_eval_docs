@@ -1,18 +1,18 @@
-# human 모델 기본 정보
+# human 모델
 
-### 66 DoFs Human 모델
+### 기본 정보
 
-<figure><img src="https://github.com/robotology/human-gazebo/raw/master/misc/human-model.png" alt=""><figcaption></figcaption></figure>
-
-human 모델 정보
+66 자유도를 가진 Human 모델
 
 | Subject | Mass \[kg] | Height \[cm] | Foot size \[cm] | Arm span \[cm] | Ankle height \[cm] | Hip height \[cm] | Hip width \[cm] | Knee height \[cm] | Shoulder width \[cm] | Shoulder height \[cm] | Sole height \[cm] |
 | :-----: | :--------: | :----------: | :-------------: | :------------: | :----------------: | :--------------: | :-------------: | :---------------: | :------------------: | :-------------------: | :---------------: |
 |    1    |    62.2    |      168     |        24       |       163      |          8         |        91        |        25       |        48.5       |         35.4         |          140          |                   |
 
-URDF
+<figure><img src="https://github.com/robotology/human-gazebo/raw/master/misc/human-model.png" alt=""><figcaption></figcaption></figure>
 
-[https://github.com/donghee/wearable\_robot\_eval/blob/main/wearable\_robot\_description/urdf/human\_66dof.xacro](https://github.com/donghee/wearable\_robot\_eval/blob/main/wearable\_robot\_description/urdf/human\_66dof.xacro)
+### 모델링 결과&#x20;
+
+출처: [https://github.com/donghee/wearable\_robot\_eval/blob/main/wearable\_robot\_description/urdf/human\_66dof.xacro](https://github.com/donghee/wearable\_robot\_eval/blob/main/wearable\_robot\_description/urdf/human\_66dof.xacro)
 
 ```
 <!--URDF MODEL 66 DoFs-->
