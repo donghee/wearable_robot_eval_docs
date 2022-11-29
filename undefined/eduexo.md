@@ -2,8 +2,6 @@
 
 ### 목적
 
-
-
 실제  EXOSKELETION 로봇의 시뮬레이션 모델을 구성하고, 제어 프로그램을 이용하여 제어해보자.
 
 ### 구현 <a href="#undefined-2" id="undefined-2"></a>
@@ -21,7 +19,7 @@ python3 1_dof_arm_gazebo_test.py 3.14
 
 <figure><img src="../.gitbook/assets/Peek 2022-09-09 23-48.gif" alt=""><figcaption></figcaption></figure>
 
-#### 실행 노​드 구조&#x20;
+### 실행 노​드 구조&#x20;
 
 <figure><img src="../.gitbook/assets/2022-09-21_00-30.png" alt=""><figcaption></figcaption></figure>
 
@@ -45,15 +43,15 @@ Action 설명
 
 `/joint_trajectory_controller` : Joints 제어 컨트롤러.  [ros2\_controllers](https://github.com/ros-controls/ros2\_controllers) 패키지.
 
-`/one_dof_arm_actionclient` : `joint_trajectory_controller 액션 서버의 클라이언트. joint 각도를 서버에 전송.` :thumbsup:
+`/one_dof_arm_actionclient` : `joint_trajectory_controller 액션 서버의 클라이언트. joint 각도를 서버에 전송.`&#x20;
+
+
 
 #### 참고
 
-[https://control.ros.org/foxy/index.html](https://control.ros.org/foxy/index.html) ros2\_control 프레임워크.&#x20;
-
-[https://control.ros.org/master/doc/ros2\_controllers/joint\_state\_broadcaster/doc/userdoc.html](https://control.ros.org/master/doc/ros2\_controllers/joint\_state\_broadcaster/doc/userdoc.html)
-
-[http://docs.ros.org/en/humble/p/joint\_state\_broadcaster/](http://docs.ros.org/en/humble/p/joint\_state\_broadcaster/)
+* [https://control.ros.org/foxy/index.html](https://control.ros.org/foxy/index.html) ros2\_control 프레임워크
+* [https://control.ros.org/master/doc/ros2\_controllers/joint\_state\_broadcaster/doc/userdoc.html](https://control.ros.org/master/doc/ros2\_controllers/joint\_state\_broadcaster/doc/userdoc.html)
+* [http://docs.ros.org/en/humble/p/joint\_state\_broadcaster](http://docs.ros.org/en/humble/p/joint\_state\_broadcaster/)
 
 
 
