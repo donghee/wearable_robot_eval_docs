@@ -21,7 +21,9 @@ gazebo에서 사용할 수 있는 인간 모델 조사
 
 <figure><img src="https://user-images.githubusercontent.com/10923418/129881033-4b926fa2-993c-4b92-b4af-f1f768940d56.png" alt=""><figcaption></figcaption></figure>
 
-#### human Model
+### MakeHuman
+
+MakeHuman 이용하여 Gazebo에 human 모델 추가&#x20;
 
 <figure><img src="https://i.imgur.com/tYoPEKS.png" alt=""><figcaption></figcaption></figure>
 
