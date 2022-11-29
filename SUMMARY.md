@@ -7,7 +7,7 @@
 * [1 자유도 로봇 모델 제작](undefined/1.md)
 * [EduExo 로봇 모델 제작](undefined/eduexo.md)
 * [human  모델 조사](undefined/human.md)
-* [시뮬레이터 센서 모델링 방법 조사](undefined/undefined.md)
+* [시뮬레이터 센서 조사](undefined/undefined.md)
 * [제어기(Control)](undefined/control.md)
 * [human 모델 제어기 추가](undefined/human-1.md)
 * [human 모델](undefined/human-2.md)
