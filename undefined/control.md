@@ -1,8 +1,10 @@
 # 제어기(Control)
 
-human 모델을 움직이거나 웨어러블 로봇을 움직이기 위해서는 제어기가 필요하다. 제어기: 입력 신호를 받아서 원하는 움직임(위치, 속도, 힘)이 되도록 출력 신호를 보낸다.
+human 모델을 움직이거나 웨어러블 로봇을 움직이기 위해서는 제어기가 필요하다. &#x20;
 
-웨어러블 로봇 평가 시스템에서는 제어기로 ros2\_control 패키지를 사용
+웨어러블 로봇 평가 시스템에서는 제어기로 ros2\_control 패키지를 사용.&#x20;
+
+입력 신호를 받아서 원하는 움직임(위치, 속도, 힘)이 되도록 출력 신호를 보낸다.
 
 <figure><img src="http://daikimaekawa.github.io/images/ros_control/gazebo_transmission.png" alt=""><figcaption></figcaption></figure>
 
