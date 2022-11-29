@@ -1,10 +1,8 @@
----
-description: gazebo에서 사용할 수 있는 인간 모델 조사
----
-
 # human  모델 조사
 
-urdf로 human을 모델링
+gazebo에서 사용할 수 있는 인간 모델 조사
+
+### URDF를 이용하여 human 모델링한 사례&#x20;
 
 * 관절이 있는 타입: human-gazebo, 사람의 관절을 link와 joint를 구성
   * [https://github.com/robotology/human-gazebo/tree/master/humanSubject01](https://github.com/robotology/human-gazebo/tree/master/humanSubject01)&#x20;
@@ -13,21 +11,17 @@ urdf로 human을 모델링
 * 피부가 있는 타입: makehuman 이용하여 인간 모델을 3d collada파일 보내고, urdf로 조립&#x20;
   * [https://github.com/valegagge/humanModels](https://github.com/valegagge/humanModels)
 
-#### human gazebo
+### human gazebo
 
-{% embed url="https://user-images.githubusercontent.com/35487806/84712016-e2377900-af67-11ea-8c5e-8a7084f474a7.png" %}
+<figure><img src="https://user-images.githubusercontent.com/35487806/84712016-e2377900-af67-11ea-8c5e-8a7084f474a7.png" alt=""><figcaption></figcaption></figure>
 
 #### human gazebo udf 생성기(파이썬)
 
 [https://github.com/ami-iit/human-model-generator](https://github.com/ami-iit/human-model-generator)
 
-{% embed url="https://user-images.githubusercontent.com/10923418/129881033-4b926fa2-993c-4b92-b4af-f1f768940d56.png" %}
-
-####
+<figure><img src="https://user-images.githubusercontent.com/10923418/129881033-4b926fa2-993c-4b92-b4af-f1f768940d56.png" alt=""><figcaption></figcaption></figure>
 
 #### human Model
-
-
 
 <figure><img src="https://i.imgur.com/tYoPEKS.png" alt=""><figcaption></figcaption></figure>
 
