@@ -22,7 +22,7 @@
 ## 개발환경 설정 <a href="#setup" id="setup"></a>
 
 * [웨어러블 로봇 평가 시스템 환경 구성](undefined-1/ros.md)
-* [웨어러블 로봇 평가 시스템 원격 환경](setup/undefined-1.md)
+* [웨어러블 로봇 평가 시스템 원격 환경](setup/remote-dev-env.md)
 
 ## 참고 <a href="#reference" id="reference"></a>
 
