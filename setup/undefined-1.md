@@ -17,7 +17,7 @@ docker run -it \
     --privileged -v /dev/bus/usb:/dev/bus/usb \
     --env="DISPLAY" \
     --env="QT_X11_NO_MITSHM=1" \
-    --workdir="/home/$USER" \
+    --workdir="/root" \
     --volume="/home/$USER:/home/$USER" \
     --volume="/etc/group:/etc/group:ro" \
     --volume="/etc/passwd:/etc/passwd:ro" \
