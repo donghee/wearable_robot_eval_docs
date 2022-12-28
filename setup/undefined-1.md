@@ -30,6 +30,8 @@ docker run -it \
 
 ### 3. tilix 터미널 실행&#x20;
 
+docker 컨테이너 안에서 여러 명령을 실행하기 위해 tilix 터미널을 실행 한다.
+
 ```
 root@488aeced02af:~/ tilix
 ```
