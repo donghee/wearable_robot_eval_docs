@@ -8,6 +8,8 @@
 
 ### 2. docker 실행
 
+실행 메뉴 -> System Tools -> LXTerminal 을 실행 후 다음 명령 실행
+
 ```
 xhost +local:root
 
