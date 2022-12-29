@@ -17,7 +17,7 @@
 
 * [URDF 링크 마찰력 테스트](undefined/urdf.md)
 * [URDF 링크 수직항력 테스트](test/urdf-1.md)
-* [URDF 링크 충돌 테스트](test/urdf-2.md)
+* [URDF 링크 충돌 테스트](undefined/urdf-1.md)
 * [effort controller 테스트](undefined/effort-controller.md)
 
 ## 개발환경 설정 <a href="#setup" id="setup"></a>
