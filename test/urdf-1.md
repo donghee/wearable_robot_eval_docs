@@ -8,6 +8,40 @@
 
 모델 링크에 Force를 설정하는Gazebo 플러그인을 만들어서 테스트  수행.  모델 링크에 가해지는 Force 값을 바꾸면서 실험하였다.
 
+```cpp
+#include <functional>
+#include <gazebo/gazebo.hh>
+#include <gazebo/physics/physics.hh>
+#include <gazebo/common/common.hh>
+#include <ignition/math/Vector3.hh>
+
+namespace gazebo
+{
+  class ModelPush : public ModelPlugin
+  {
+    public: void Load(physics::ModelPtr _parent, sdf::ElementPtr /*_sdf*/)
+    {
+      this->model = _parent;
+
+      this->updateConnection = event::Events::ConnectWorldUpdateBegin(
+          std::bind(&ModelPush::OnUpdate, this));
+    }
+
+    public: void OnUpdate()
+    {
+      this->model->GetLink("link")->SetForce(ignition::math::Vector3d(100.0, 0.0, 0.0)); // no slip
+      // this->model->GetLink("link")->SetForce(ignition::math::Vector3d(9.0, 0.0, 0.0)); //slip at mu 1.0
+    }
+
+    private: physics::ModelPtr model;
+
+    private: event::ConnectionPtr updateConnection;
+  };
+
+  GZ_REGISTER_MODEL_PLUGIN(ModelPush)
+}
+```
+
 ### 테스트 수행
 
 1. 회색 Box모델 링크에 X축으로 100 N 힘을 적용 (마찰계수 mu, mu2는 1.0 적용) -> 미끄러지지 않음&#x20;
