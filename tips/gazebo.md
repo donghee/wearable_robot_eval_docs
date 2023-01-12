@@ -86,7 +86,7 @@ joint {
 
 모델의 joint와 link으 가속도, 속도, 위치 값을 볼수 있음&#x20;
 
-![](<../.gitbook/assets/image (1).png>)
+![](<../.gitbook/assets/image (1) (2).png>)
 
 
 
@@ -116,3 +116,41 @@ sim_time, human/RightForeArm?world_angular_acceleration/x
 오른팔 팔꿈치 아래팔  link
 
 ![](<../.gitbook/assets/image (5).png>)
+
+
+
+
+
+Gazebo API를 이용하여 모델의 link로 부터 얻을 수 있는 정보
+
+&#x20;\- 각가속도, 각속도, 힘, 가속도, 속도, 위치, 토크&#x20;
+
+{% embed url="http://osrf-distributions.s3.amazonaws.com/gazebo/api/11.0.0/classgazebo_1_1physics_1_1Link.html" %}
+
+모델의 Joint로 부터 얻을 수 있는 정보
+
+&#x20;\- 각가속도, 각속도, 위치
+
+{% embed url="http://osrf-distributions.s3.amazonaws.com/gazebo/api/11.0.0/classgazebo_1_1physics_1_1Joint.html" %}
+
+ROS를 이용하여 모델의 joint 정보 얻기&#x20;
+
+```
+$ ros2 topic echo /joint_states
+header:
+  stamp:
+    sec: 1673503163
+    nanosec: 264233953
+  frame_id: ''
+name:
+- arm_joint
+position:
+- -1.500349911055852
+velocity:
+- -0.3499110571993693
+effort:
+- .nan
+---
+```
+
+{% embed url="https://classic.gazebosim.org/gzweb" %}
