@@ -18,6 +18,6 @@ Human 모델에 웨어러블 로봇을 입혀 보자.
 
 ``
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% embed url="https://youtu.be/-3CZxaRlbQI" %}
