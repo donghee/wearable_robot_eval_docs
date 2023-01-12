@@ -8,3 +8,6 @@ gazebo 특정 토픽 보기&#x20;
 
 `gz topic -v /gazebo/default/robot_name/Pelvis/wrench`
 
+
+
+<figure><img src="../.gitbook/assets/gazebo_plot.gif" alt=""><figcaption></figcaption></figure>
