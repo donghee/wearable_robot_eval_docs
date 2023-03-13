@@ -38,29 +38,26 @@ root@488aeced02af:~/ tilix
 
 ### 4. human 모델 로드
 
+{% code overflow="wrap" %}
 ```bash
 cd ~/ros2_ws && colcon build && source ./install/setup.bash && ros2 launch wearable_robot_gazebo human_only.launch.py
-
 ```
-
-
+{% endcode %}
 
 ### 5. human 모델의 동작이 안정화 된 상태에서 웨어러블 로봇(EduExo) 모델 로드
 
-`cd ~/ros2_ws && colcon build && source ./install/setup.bash && ros2 launch wearable_robot_gazebo eduexo_only.launch.py`
-
+{% code overflow="wrap" %}
 ```bash
 cd ~/ros2_ws && colcon build && source ./install/setup.bash && ros2 launch wearable_robot_gazebo eduexo_only.launch.py
 ```
+{% endcode %}
 
 ### `6`. 웨어러블 로봇 제어
 
-`cd ~/ros2_ws && python3 src/wearable_robot_eval/wearable_robot_description/scripts/1_dof_arm_gazebo_test.py -2.5`
-
-``
-
+{% code overflow="wrap" %}
 ```bash
 cd ~/ros2_ws && python3 src/wearable_robot_eval/wearable_robot_description/scripts/1_dof_arm_gazebo_test.py -2.5
 ```
+{% endcode %}
 
 ``
