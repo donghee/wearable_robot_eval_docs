@@ -4,7 +4,7 @@
 
 다음 링크로 접속 후 id와 비밀번호를 넣고 웨어러블 로봇 평가 시스템 개발 환경에 접속한다.&#x20;
 
-{% embed url="https://wearable.baribarilab.com/vnc.html?path=?token=p1" %}
+{% embed url="https://wearable.baribarilab.com/vnc.html?path=?token=p1&resize=remote&autoconnect=true" %}
 
 ### 2. docker 실행
 
@@ -60,4 +60,3 @@ cd ~/ros2_ws && python3 src/wearable_robot_eval/wearable_robot_description/scrip
 ```
 {% endcode %}
 
-``
