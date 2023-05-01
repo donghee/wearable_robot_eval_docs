@@ -16,7 +16,7 @@
 
 
 
-
+<figure><img src="https://i.imgur.com/zDyzSJ4.png" alt=""><figcaption><p>참고: Xsens MVN</p></figcaption></figure>
 
 ```xml
 <!--URDF MODEL 66 DoFs-->
