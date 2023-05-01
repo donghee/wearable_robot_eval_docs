@@ -16,7 +16,14 @@
 
 
 
-<figure><img src="https://i.imgur.com/zDyzSJ4.png" alt=""><figcaption><p>참고: Xsens MVN</p></figcaption></figure>
+<figure><img src="https://i.imgur.com/zDyzSJ4.png" alt=""><figcaption><p>참고: Xsens MVN Biomechanical Model</p></figcaption></figure>
+
+|        |               |   |
+| ------ | ------------- | - |
+| Pelvis | 요추와 엉덩이 조인트 연 |   |
+|        |               |   |
+|        |               |   |
+|        |               |   |
 
 ```xml
 <!--URDF MODEL 66 DoFs-->
