@@ -14,21 +14,24 @@
 
 출처: [https://github.com/donghee/wearable\_robot\_eval/blob/main/wearable\_robot\_description/urdf/human\_66dof.xacro](https://github.com/donghee/wearable\_robot\_eval/blob/main/wearable\_robot\_description/urdf/human\_66dof.xacro)
 
-```
+
+
+
+
+```xml
 <!--URDF MODEL 66 DoFs-->
 
 <robot name="human" xmlns:xacro="http://www.ros.org/wiki/xacro">
   <!-- Import all Gazebo-customization elements, including Gazebo colors -->
   <!-- <xacro:include filename="$(find wearable_robot_description)/urdf/human_66dof.gazebo"/> -->
   <!-- Import Rviz colors -->
+  <!-- 색 정의 -->
   <xacro:include filename="$(find wearable_robot_description)/urdf/materials.xacro"/>
 
-    <!-- <joint name="world_fixed" type="fixed"> -->
-    <!--   <origin xyz="0.743217    1.0          1.1" rpy="0 0 0"/> -->
-    <!--   <parent link="world"/> -->
-    <!--   <child link="base_link"/> -->
-    <!-- </joint> -->
-
+  <!--To open this model with Gazebo replace the null masses, inertias and dimensions of the 'fake links f1 and f2'-->
+  <!--LINKS-->
+  <!--Link base (1)-->
+  <!-- 골반 -->
   <link name="Pelvis">
     <inertial>
       <mass value="4.976"/>
@@ -55,7 +58,10 @@
     </collision>
 
   </link>
+
   <!--Chain from (2) to (7)-->
+  <!-- 허리뼈 Lumbar Spine L5번 부터 L3번 까지 -->
+  <!-- _f1, _f2로 끝나는 링크는 x, y축 조인트 회전을 위한 링크이고, _f1, _f2가 표시가 없는 링크는 z축 회전을 위한 링크이다. _f1, _f2 링크는 회전을 위해 만들어진 Fake Link 이다. -->
   <link name="L5_f1">
     <inertial>
       <mass value="0.1"/>
@@ -95,6 +101,8 @@
       </geometry>
     </collision>
   </link>
+
+  <!-- 허리뼈 Lumbar L3번 부터 L1번 까지 -->
   <link name="L3_f1">
     <inertial>
       <mass value="0.1"/>
@@ -134,6 +142,8 @@
       </geometry>
     </collision>
   </link>
+
+  <!-- 등뼈 Thoracic Spline T12번 부터 T8번 까지 -->
   <link name="T12_f1">
     <inertial>
       <mass value="0.1"/>
@@ -173,6 +183,8 @@
       </geometry>
     </collision>
   </link>
+
+  <!-- 등뼈 Thoracic Spline T8번 부터 T1번 까지 -->
   <link name="T8_f1">
     <inertial>
       <mass value="0.1"/>
@@ -213,6 +225,8 @@
     </collision>
 
   </link>
+
+  <!-- 목 -->
   <link name="Neck_f1">
     <inertial>
       <mass value="0.1"/>
@@ -252,6 +266,8 @@
       </geometry>
     </collision>
   </link>
+
+  <!-- 머리 -->
   <link name="Head_f1">
     <inertial>
       <mass value="0.1"/>
@@ -292,6 +308,8 @@
     </collision>
 
   </link>
+
+  <!-- 오른쪽 어깨 -->
   <!--Chain from (8) to (11)-->
   <link name="RightShoulder_f1">
     <inertial>
@@ -333,6 +351,8 @@
     </collision>
 
   </link>
+
+  <!-- 오른쪽 상완 -->
   <link name="RightUpperArm_f1">
     <inertial>
       <mass value="0.1"/>
@@ -373,6 +393,8 @@
     </collision>
 
   </link>
+
+  <!-- 오른쪽 전완 -->
   <link name="RightForeArm_f1">
     <inertial>
       <mass value="0.1"/>
@@ -413,6 +435,8 @@
     </collision>
 
   </link>
+
+  <!-- 오른손 -->
   <link name="RightHand_f1">
     <inertial>
       <mass value="0.1"/>
@@ -454,6 +478,7 @@
       <contact_coefficients mu="0" kp="1000.0" kd="1.0"/>
     </collision>
   </link>
+  <!-- 오른손가락 -->
   <link name="RightHandCOM">
     <inertial>
       <mass value="0.00001"/>
@@ -469,7 +494,10 @@
       <material name="color"/>
     </visual>
   </link>
+
+
   <!--Chain from (12) to (15)-->
+  <!-- 왼쪽 어깨 -->
   <link name="LeftShoulder_f1">
     <inertial>
       <mass value="0.1"/>
@@ -510,6 +538,8 @@
     </collision>
 
   </link>
+
+  <!-- 왼쪽 상완 -->
   <link name="LeftUpperArm_f1">
     <inertial>
       <mass value="0.1"/>
@@ -550,6 +580,8 @@
     </collision>
 
   </link>
+
+  <!-- 왼쪽 전완 -->
   <link name="LeftForeArm_f1">
     <inertial>
       <mass value="0.1"/>
@@ -590,6 +622,8 @@
     </collision>
 
   </link>
+
+  <!-- 왼손 -->
   <link name="LeftHand_f1">
     <inertial>
       <mass value="0.1"/>
@@ -630,6 +664,7 @@
     </collision>
 
   </link>
+  <!-- 왼손가락 -->
   <link name="LeftHandCOM">
     <inertial>
       <mass value="0.00001"/>
@@ -645,7 +680,9 @@
       <material name="color"/>
     </visual>
   </link>
+
   <!--Chain from (16) to (19)-->
+  <!-- 오른쪽 대퇴골 -->
   <link name="RightUpperLeg_f1">
     <inertial>
       <mass value="0.1"/>
@@ -686,6 +723,8 @@
     </collision>
 
   </link>
+
+  <!-- 오른쪽 경골 -->
   <link name="RightLowerLeg_f1">
     <inertial>
       <mass value="0.1"/>
@@ -726,6 +765,8 @@
     </collision>
 
   </link>
+
+  <!-- 오른발 -->
   <link name="RightFoot_f1">
     <inertial>
       <mass value="0.1"/>
@@ -766,6 +807,8 @@
     </collision>
 
   </link>
+
+  <!-- 오른발가락 -->
   <link name="RightToe_f1">
     <inertial>
       <mass value="0.1"/>
@@ -806,6 +849,7 @@
     </collision>
   </link>
   <!--Chain from (20) to (23)-->
+  <!-- 왼쪽 대퇴골 -->
   <link name="LeftUpperLeg_f1">
     <inertial>
       <mass value="0.1"/>
@@ -846,6 +890,7 @@
     </collision>
 
   </link>
+  <!-- 왼쪽 경골 -->
   <link name="LeftLowerLeg_f1">
     <inertial>
       <mass value="0.1"/>
@@ -886,6 +931,7 @@
     </collision>
 
   </link>
+  <!-- 왼발 -->
   <link name="LeftFoot_f1">
     <inertial>
       <mass value="0.1"/>
@@ -926,6 +972,7 @@
     </collision>
 
   </link>
+  <!-- 왼발가락 -->
   <link name="LeftToe_f1">
     <inertial>
       <mass value="0.1"/>
@@ -966,9 +1013,10 @@
     </collision>
   </link>
 
-
+  <!-- 관절 -->
   <!--JOINTS-->
   <!--Chain from (2) to (7)-->
+  <!-- 골반과 허리뼈 L5 사이의 조인트 X, Y, Z-->
   <joint name="jL5S1_rotx" type="fixed">
     <origin xyz="-0.000206           0    0.098478" rpy="0 0 0"/>
     <parent link="Pelvis"/>
@@ -993,6 +1041,7 @@
     <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
     <axis xyz="0 0 1" />
   </joint>
+  <!-- 허리뼈 L4 허리뼈 L3 사이의 조인트 X, Y, Z-->
   <joint name="jL4L3_rotx" type="fixed">
     <origin xyz="0.000374           0    0.095104" rpy="0 0 0"/>
     <parent link="L5"/>
@@ -1017,6 +1066,7 @@
     <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
     <axis xyz="0 0 1" />
   </joint>
+  <!-- 허리뼈 L1와 등뼈 T12 사이의 조인트 X, Y, Z-->
   <joint name="jL1T12_rotx" type="fixed">
     <origin xyz="0           0    0.085916" rpy="0 0 0"/>
     <parent link="L3"/>
@@ -1041,6 +1091,7 @@
     <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
     <axis xyz="0 0 1" />
   </joint>
+  <!-- 등뼈 T9와 등뼈 T8 사이의 조인트 X, Y, Z-->
   <joint name="jT9T8_rotx" type="fixed">
     <origin xyz="0           0    0.085916" rpy="0 0 0"/>
     <parent link="T12"/>
@@ -1065,6 +1116,7 @@
     <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
     <axis xyz="0 0 1" />
   </joint>
+  <!-- 허리뼈 T1와 경추 C7 사이의 조인트 X, Y, Z-->
   <joint name="jT1C7_rotx" type="fixed">
     <origin xyz="0           0     0.11975" rpy="0 0 0"/>
     <parent link="T8"/>
@@ -1089,6 +1141,7 @@
     <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
     <axis xyz="0 0 1" />
   </joint>
+  <!-- 경추 C1과 머리 사이의 조인트 X, Y, Z-->
   <joint name="jC1Head_rotx" type="fixed">
     <origin xyz="0.000152           0    0.089252" rpy="0 0 0"/>
     <parent link="Neck"/>
@@ -1115,6 +1168,7 @@
   </joint>
   <!--Chain from (8) to (11)-->
   <!-- Shouler -->
+  <!-- 경추 C7과 오른쪽 어깨 사이의 조인트 X, Y, Z-->
   <joint name="jRightC7Shoulder_rotx" type="fixed">
     <origin xyz="0   -0.026313    0.067052" rpy="0 0 0"/>
     <parent link="T8"/>
@@ -1139,6 +1193,7 @@
     <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
     <axis xyz="0 0 1" />
   </joint>
+  <!-- 오른쪽 어깨와 상완 사이의 조인트 X, Y, Z-->
   <joint name="jRightShoulder_rotx" type="revolute">
     <origin xyz="0    -0.13047           0" rpy="0 0 0"/>
     <parent link="RightShoulder"/>
@@ -1163,6 +1218,7 @@
     <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
     <axis xyz="0 0 1" />
   </joint>
+  <!-- 오른쪽 상완과 전완 사이의 조인트 X, Y, Z-->
   <joint name="jRightElbow_rotx" type="revolute">
     <origin xyz="0    -0.26994           0" rpy="0 0 0"/>
     <parent link="RightUpperArm"/>
@@ -1187,6 +1243,7 @@
     <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
     <axis xyz="0 0 1" />
   </joint>
+  <!-- 오른쪽 전완과 손사이의 조인트 X, Y, Z: 오른쪽 팔목 -->
   <joint name="jRightWrist_rotx" type="fixed">
     <origin xyz="7.7e-05    -0.22247           0" rpy="0 0 0"/>
     <parent link="RightForeArm"/>
@@ -1211,6 +1268,7 @@
     <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
     <axis xyz="0 0 1" />
   </joint>
+  <!-- 오른손과 손가락 사이의 조인트 -->
   <joint name="jRightHandCOM" type="fixed">
     <origin xyz="0 -0.096206 0" rpy="0 0 0"/>
     <parent link="RightHand"/>
@@ -1218,6 +1276,7 @@
     <axis xyz="0 0 0" />
   </joint>
   <!--Chain from (12) to (15)-->
+  <!-- 경추 C7과 왼쪽 어깨 사이의 조인트 X, Y, Z-->
   <joint name="jLeftC7Shoulder_rotx" type="fixed">
     <origin xyz="0    0.026313    0.067052" rpy="0 0 0"/>
     <parent link="T8"/>
@@ -1242,6 +1301,7 @@
     <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
     <axis xyz="0 0 1" />
   </joint>
+  <!-- 왼쪽 어깨와 상완 사이의 조인트 X, Y, Z-->
   <joint name="jLeftShoulder_rotx" type="revolute">
     <origin xyz="0     0.13047           0" rpy="0 0 0"/>
     <parent link="LeftShoulder"/>
@@ -1266,6 +1326,7 @@
     <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
     <axis xyz="0 0 1" />
   </joint>
+  <!-- 왼쪽 상완과 전완 사이의 조인트 X, Y, Z-->
   <joint name="jLeftElbow_rotx" type="revolute">
     <origin xyz="0     0.26994           0" rpy="0 0 0"/>
     <parent link="LeftUpperArm"/>
@@ -1290,6 +1351,7 @@
     <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
     <axis xyz="0 0 1" />
   </joint>
+  <!-- 왼쪽 전완과 손사이의 조인트 X, Y, Z: 왼쪽 팔목 -->
   <joint name="jLeftWrist_rotx" type="revolute">
     <origin xyz="7.7e-05     0.22247           0" rpy="0 0 0"/>
     <parent link="LeftForeArm"/>
@@ -1314,6 +1376,7 @@
     <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
     <axis xyz="0 0 1" />
   </joint>
+  <!-- 왼손과 손가락 사이의 조인트 -->
   <joint name="jLeftHandCOM" type="fixed">
     <origin xyz="0 0.096206 0" rpy="0 0 0"/>
     <parent link="LeftHand"/>
@@ -1321,6 +1384,7 @@
     <axis xyz="0 0 0" />
   </joint>
   <!--Chain from (16) to (19)-->
+  <!-- 골반과 오른쪽 대퇴골 사이의 조인트 X, Y, Z: 엉덩이 -->
   <joint name="jRightHip_rotx" type="revolute">
     <origin xyz="0.000103   -0.081614    0.001009" rpy="0 0 0"/>
     <parent link="Pelvis"/>
@@ -1345,6 +1409,7 @@
     <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
     <axis xyz="0 0 1" />
   </joint>
+  <!-- 오른쪽 대쾌골과 경골 사이의 조인트 X, Y, Z: 오른 무릎 -->
   <joint name="jRightKnee_rotx" type="revolute">
     <origin xyz="3.6e-05           0    -0.44898" rpy="0 0 0"/>
     <parent link="RightUpperLeg"/>
@@ -1369,6 +1434,7 @@
     <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
     <axis xyz="0 0 1" />
   </joint>
+  <!-- 오른쪽 경골과 발 사이의 조인트 X, Y, Z: 오른 발목 -->
   <joint name="jRightAnkle_rotx" type="revolute">
     <origin xyz="0.000205           0    -0.40608" rpy="0 0 0"/>
     <parent link="RightLowerLeg"/>
@@ -1393,6 +1459,7 @@
     <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
     <axis xyz="0 0 1" />
   </joint>
+  <!-- 오른발과 발가락 사이의 조인트 X, Y, Z -->
   <joint name="jRightBallFoot_rotx" type="revolute">
     <origin xyz="0.14456           0   -0.064752" rpy="0 0 0"/>
     <parent link="RightFoot"/>
@@ -1418,6 +1485,7 @@
     <axis xyz="0 0 1" />
   </joint>
   <!--Chain from (20) to (23)-->
+  <!-- 골반과 왼쪽 대퇴골 사이의 조인트 X, Y, Z: 엉덩이 -->
   <joint name="jLeftHip_rotx" type="revolute">
     <origin xyz="0.000103    0.081614    0.001009" rpy="0 0 0"/>
     <parent link="Pelvis"/>
@@ -1442,6 +1510,7 @@
     <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
     <axis xyz="0 0 1" />
   </joint>
+  <!-- 왼쪽 대쾌골과 경골 사이의 조인트 X, Y, Z: 왼 무릎 -->
   <joint name="jLeftKnee_rotx" type="revolute">
     <origin xyz="3.6e-05           0    -0.44898" rpy="0 0 0"/>
     <parent link="LeftUpperLeg"/>
@@ -1466,6 +1535,7 @@
     <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
     <axis xyz="0 0 1" />
   </joint>
+  <!-- 왼쪽 경골과 발 사이의 조인트 X, Y, Z: 왼 발목 -->
   <joint name="jLeftAnkle_rotx" type="revolute">
     <origin xyz="0.000205           0    -0.40608" rpy="0 0 0"/>
     <parent link="LeftLowerLeg"/>
@@ -1490,6 +1560,7 @@
     <limit effort="30" velocity="1.0" lower="-10.0" upper="10.0" />
     <axis xyz="0 0 1" />
   </joint>
+  <!-- 왼발과 발가락 사이의 조인트 X, Y, Z -->
   <joint name="jLeftBallFoot_rotx" type="revolute">
     <origin xyz="0.14456           0   -0.064752" rpy="0 0 0"/>
     <parent link="LeftFoot"/>
@@ -1515,8 +1586,10 @@
     <axis xyz="0 0 1" />
   </joint>
 
+  <!-- 월드 기준 -->
   <link name="world"/>
 
+  <!-- 월드와 골반 고정 -->
   <joint name="human_fixed_joint" type="fixed">
     <parent link="world" />
     <child  link = "Pelvis" />
@@ -1537,163 +1610,6 @@
     </joint>
   </ros2_control>
 
-  <!-- Sensor  1-->
-  <sensor name="Pelvis_gyro" type="gyroscope">
-    <parent link="Pelvis"/>
-    <origin xyz="-0.056756 -5.6944e-06    0.097055" rpy="-0.3247     0.95826      2.4984"/>
-  </sensor>
-  <sensor name="Pelvis_accelerometer" type="accelerometer">
-    <parent link="Pelvis"/>
-    <origin xyz="-0.056756 -5.6944e-06    0.097055" rpy="-0.3247     0.95826      2.4984"/>
-  </sensor>
-  <!-- Sensor  2-->
-  <sensor name="T8_gyro" type="gyroscope">
-    <parent link="T8"/>
-    <origin xyz="0.1256  2.9265e-07    0.069079" rpy="0.054662      1.1921    0.026605"/>
-  </sensor>
-  <sensor name="T8_accelerometer" type="accelerometer">
-    <parent link="T8"/>
-    <origin xyz="0.1256  2.9265e-07    0.069079" rpy="0.054662      1.1921    0.026605"/>
-  </sensor>
-  <!-- Sensor  3-->
-  <sensor name="Head_gyro" type="gyroscope">
-    <parent link="Head"/>
-    <origin xyz="-0.069574  4.0118e-07    0.076475" rpy="2.3602    0.029132     -1.6926"/>
-  </sensor>
-  <sensor name="Head_accelerometer" type="accelerometer">
-    <parent link="Head"/>
-    <origin xyz="-0.069574  4.0118e-07    0.076475" rpy="2.3602    0.029132     -1.6926"/>
-  </sensor>
-  <!-- Sensor  4-->
-  <sensor name="RightShoulder_gyro" type="gyroscope">
-    <parent link="RightShoulder"/>
-    <origin xyz="-0.018859   -0.047148   -0.056578" rpy="1.3372    -0.28335     -1.4594"/>
-  </sensor>
-  <sensor name="RightShoulder_accelerometer" type="accelerometer">
-    <parent link="RightShoulder"/>
-    <origin xyz="-0.018859   -0.047148   -0.056578" rpy="1.3372    -0.28335     -1.4594"/>
-  </sensor>
-  <!-- Sensor  5-->
-  <sensor name="RightUpperArm_gyro" type="gyroscope">
-    <parent link="RightUpperArm"/>
-    <origin xyz="-0.018123   -0.090613    0.018123" rpy="-0.15226    0.030142     -1.5884"/>
-  </sensor>
-  <sensor name="RightUpperArm_accelerometer" type="accelerometer">
-    <parent link="RightUpperArm"/>
-    <origin xyz="-0.018123   -0.090613    0.018123" rpy="-0.15226    0.030142     -1.5884"/>
-  </sensor>
-  <!-- Sensor  6-->
-  <sensor name="RightForeArm_gyro" type="gyroscope">
-    <parent link="RightForeArm"/>
-    <origin xyz="0.0016793    -0.18323      0.0183" rpy="-1.1132    0.015024     -1.2543"/>
-  </sensor>
-  <sensor name="RightForeArm_accelerometer" type="accelerometer">
-    <parent link="RightForeArm"/>
-    <origin xyz="0.0016793    -0.18323      0.0183" rpy="-1.1132    0.015024     -1.2543"/>
-  </sensor>
-  <!-- Sensor  7-->
-  <sensor name="RightHand_gyro" type="gyroscope">
-    <parent link="RightHand"/>
-    <origin xyz="-3.4565e-08   -0.050814    0.018478" rpy="-0.69083   -0.053849     -1.4329"/>
-  </sensor>
-  <sensor name="RightHand_accelerometer" type="accelerometer">
-    <parent link="RightHand"/>
-    <origin xyz="-3.4565e-08   -0.050814    0.018478" rpy="-0.69083   -0.053849     -1.4329"/>
-  </sensor>
-  <!-- Sensor  8-->
-  <sensor name="LeftShoulder_gyro" type="gyroscope">
-    <parent link="LeftShoulder"/>
-    <origin xyz="-0.018859    0.047148   -0.056578" rpy="-1.1487    -0.34419      1.3655"/>
-  </sensor>
-  <sensor name="LeftShoulder_accelerometer" type="accelerometer">
-    <parent link="LeftShoulder"/>
-    <origin xyz="-0.018859    0.047148   -0.056578" rpy="-1.1487    -0.34419      1.3655"/>
-  </sensor>
-  <!-- Sensor  9-->
-  <sensor name="LeftUpperArm_gyro" type="gyroscope">
-    <parent link="LeftUpperArm"/>
-    <origin xyz="-0.018123    0.090613    0.018123" rpy="0.094373   -0.042991      1.6861"/>
-  </sensor>
-  <sensor name="LeftUpperArm_accelerometer" type="accelerometer">
-    <parent link="LeftUpperArm"/>
-    <origin xyz="-0.018123    0.090613    0.018123" rpy="0.094373   -0.042991      1.6861"/>
-  </sensor>
-  <!-- Sensor  10-->
-  <sensor name="LeftForeArm_gyro" type="gyroscope">
-    <parent link="LeftForeArm"/>
-    <origin xyz="0.0016791     0.18323    0.018301" rpy="0.90429     0.18107      1.1351"/>
-  </sensor>
-  <sensor name="LeftForeArm_accelerometer" type="accelerometer">
-    <parent link="LeftForeArm"/>
-    <origin xyz="0.0016791     0.18323    0.018301" rpy="0.90429     0.18107      1.1351"/>
-  </sensor>
-  <!-- Sensor  11-->
-  <sensor name="LeftHand_gyro" type="gyroscope">
-    <parent link="LeftHand"/>
-    <origin xyz="1.1198e-08    0.050814    0.018478" rpy="1.2175   -0.077786      1.3837"/>
-  </sensor>
-  <sensor name="LeftHand_accelerometer" type="accelerometer">
-    <parent link="LeftHand"/>
-    <origin xyz="1.1198e-08    0.050814    0.018478" rpy="1.2175   -0.077786      1.3837"/>
-  </sensor>
-  <!-- Sensor  12-->
-  <sensor name="RightUpperLeg_gyro" type="gyroscope">
-    <parent link="RightUpperLeg"/>
-    <origin xyz="0.012972    -0.04567    -0.26981" rpy="2.8247      1.4102      1.8304"/>
-  </sensor>
-  <sensor name="RightUpperLeg_accelerometer" type="accelerometer">
-    <parent link="RightUpperLeg"/>
-    <origin xyz="0.012972    -0.04567    -0.26981" rpy="2.8247      1.4102      1.8304"/>
-  </sensor>
-  <!-- Sensor  13-->
-  <sensor name="RightLowerLeg_gyro" type="gyroscope">
-    <parent link="RightLowerLeg"/>
-    <origin xyz="0.030805   0.0070514    -0.13253" rpy="-2.9287      1.4733     -1.9582"/>
-  </sensor>
-  <sensor name="RightLowerLeg_accelerometer" type="accelerometer">
-    <parent link="RightLowerLeg"/>
-    <origin xyz="0.030805   0.0070514    -0.13253" rpy="-2.9287      1.4733     -1.9582"/>
-  </sensor>
-  <!-- Sensor  14-->
-  <sensor name="RightFoot_gyro" type="gyroscope">
-    <parent link="RightFoot"/>
-    <origin xyz="0.083701   0.0013928   -0.011817" rpy="0.30301     0.49685    -0.19697"/>
-  </sensor>
-  <sensor name="RightFoot_accelerometer" type="accelerometer">
-    <parent link="RightFoot"/>
-    <origin xyz="0.083701   0.0013928   -0.011817" rpy="0.30301     0.49685    -0.19697"/>
-  </sensor>
-  <!-- Sensor  15-->
-  <sensor name="LeftUpperLeg_gyro" type="gyroscope">
-    <parent link="LeftUpperLeg"/>
-    <origin xyz="0.012973     0.04567    -0.26981" rpy="-2.3214      1.4159     -1.1979"/>
-  </sensor>
-  <sensor name="LeftUpperLeg_accelerometer" type="accelerometer">
-    <parent link="LeftUpperLeg"/>
-    <origin xyz="0.012973     0.04567    -0.26981" rpy="-2.3214      1.4159     -1.1979"/>
-  </sensor>
-  <!-- Sensor  16-->
-  <sensor name="LeftLowerLeg_gyro" type="gyroscope">
-    <parent link="LeftLowerLeg"/>
-    <origin xyz="0.030805  -0.0070515    -0.13253" rpy="-2.6156      1.3817      2.7867"/>
-  </sensor>
-  <sensor name="LeftLowerLeg_accelerometer" type="accelerometer">
-    <parent link="LeftLowerLeg"/>
-    <origin xyz="0.030805  -0.0070515    -0.13253" rpy="-2.6156      1.3817      2.7867"/>
-  </sensor>
-  <!-- Sensor  17-->
-  <sensor name="LeftFoot_gyro" type="gyroscope">
-    <parent link="LeftFoot"/>
-    <origin xyz="0.083701  -0.0013929   -0.011817" rpy="-0.10862      0.4501     0.37976"/>
-  </sensor>
-  <sensor name="LeftFoot_accelerometer" type="accelerometer">
-    <parent link="LeftFoot"/>
-p    <origin xyz="0.083701  -0.0013929   -0.011817" rpy="-0.10862      0.4501     0.37976"/>
-  </sensor>
-    <gazebo reference="RightUpperArm">
-	    <mu1>1.0</mu1>
-	    <mu2>1.0</mu2>
-	  </gazebo>
 </robot>
 
 ```
