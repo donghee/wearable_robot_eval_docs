@@ -22,9 +22,9 @@
 
 <figure><img src="https://user-images.githubusercontent.com/35487806/84712016-e2377900-af67-11ea-8c5e-8a7084f474a7.png" alt="" width="375"><figcaption></figcaption></figure>
 
-| 이름              | 설명                             | 조인트와 연결                                  |
+| 링크 이름           | 설명                             | 조인트와 연결                                  |
 | --------------- | ------------------------------ | ---------------------------------------- |
-| Pelvis          | 골반                             | 요추(L5S1)와 엉덩이 조인트에 연결                    |
+| Pelvis          | 골반                             | jL5S1과과  jHip 조인트에 연결                    |
 | L5              | 허리뼈 Lumbar Spine L5번 부터 L3번    | jL5S1과 jL4L3 조인트에 연결                     |
 | L3              | 허리뼈 Lumbar Spine L3번 부터 L1번    | jL4L3과 jL1T12 조인트에 연결                    |
 | T12             | 등뼈 Thoracic Spline T12번 부터 T8번 | jL1T12와 jT9T8 조인트에 연결                    |
