@@ -20,6 +20,8 @@
 
 **링크 설명**
 
+<figure><img src="https://user-images.githubusercontent.com/35487806/84712016-e2377900-af67-11ea-8c5e-8a7084f474a7.png" alt="" width="375"><figcaption></figcaption></figure>
+
 | 이름              | 설명                             | 조인트와 연결                                  |
 | --------------- | ------------------------------ | ---------------------------------------- |
 | Pelvis          | 골반                             | 요추(L5S1)와 엉덩이 조인트에 연결                    |
@@ -1643,3 +1645,8 @@
 </robot>
 
 ```
+
+#### 참고
+
+&#x20;\- Xsens MVN BBiomechanical Model:  [https://base.xsens.com/s/article/MVN-Biomechanical-Model?language=en\_US](https://base.xsens.com/s/article/MVN-Biomechanical-Model?language=en\_US)
+
