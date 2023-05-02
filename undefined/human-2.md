@@ -8,7 +8,7 @@
 | :-----: | :--------: | :----------: | :-------------: | :------------: | :----------------: | :--------------: | :-------------: | :---------------: | :------------------: | :-------------------: | :---------------: |
 |    1    |    62.2    |      168     |        24       |       163      |          8         |        91        |        25       |        48.5       |         35.4         |          140          |                   |
 
-<figure><img src="https://github.com/robotology/human-gazebo/raw/master/misc/human-model.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://github.com/robotology/human-gazebo/raw/master/misc/human-model.png" alt="" width="375"><figcaption></figcaption></figure>
 
 ### 모델링 결과&#x20;
 
@@ -16,7 +16,7 @@
 
 
 
-<figure><img src="https://i.imgur.com/zDyzSJ4.png" alt=""><figcaption><p>참고: Xsens MVN Biomechanical Model</p></figcaption></figure>
+<figure><img src="https://i.imgur.com/zDyzSJ4.png" alt="" width="375"><figcaption><p>참고: Xsens MVN Biomechanical Model</p></figcaption></figure>
 
 **링크 설명**
 
