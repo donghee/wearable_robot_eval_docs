@@ -18,12 +18,35 @@
 
 <figure><img src="https://i.imgur.com/zDyzSJ4.png" alt=""><figcaption><p>참고: Xsens MVN Biomechanical Model</p></figcaption></figure>
 
-|        |               |   |
-| ------ | ------------- | - |
-| 골반 | 요추와 엉덩이 조인트 연 |   |
-|        |               |   |
-|        |               |   |
-|        |               |   |
+#### 링크 설명
+
+| 이름       | 설명 | 조인트와 연결              | 
+| ------ | ------------- | 
+| Pelvis | 골반 | 요추(L5S1)와 엉덩이 조인트에 연결 | 
+|  L5   | 요추 | jL5S1과 jL4L3 조인트에 연결               | 
+|  L3     |  요추 | jL4L3과 jL1T12 조인트에 연결               | 
+|  T12      | 경추 | jL1T12와 jT9T8 조인트에 연결               | 
+|  T8      | 경추 | jT9T8과 jT1C7 조인트에 연결               | 
+| Neck | 목 | jT1C7과 JC1Head 조인트에 연결 |
+| Head |  머리 | jC1Head 조인트에 연결 |
+| Right Shoulder | 오른어깨 | jRightC7Shoulder와 jRightUpperArm 조인트에 연결 |
+| Right Upper Arm | 오른팔 상완 | jRightUpperArm과 jRightElbow 조인트에 연결 |
+| Right Fore Arm | 오른팔 전완 | jRightElbow와 jRightWrist 조인트에 연결 |
+| Right Hand | 오른손 | jRightWrist 조인트에 연결 |
+| Left Shoulder | 왼어깨 | jLeftC7Shoulder와 jLeftUpperArm 조인트에 연결 |
+| Left Upper Arm | 왼팔 상완 | jLeftUpperArm과 jLeftElbow 조인트에 연결 |
+| Left Fore Arm | 왼팔 전완 | jLeftElbow와 jLeftWrist 조인트에 연결 |
+| Left Hand | 왼손 | jLeftWrist 조인트에 연결 |
+| Right Upper Leg | 오른쪽 대퇴골 | jRightHip과 jRightKnee 조인트에 연결 |
+| Right Lower Leg | 오른족 경골 | jRightKnee와 jRightAnkle 조인트에 연결 |
+| Right Foot | 오른발 | jRightAnkle와 jRightToe 조인트에 연결 |
+| Right Toe | 오른발가락 | jRightToe 조인트에 연결 |
+| Left Upper Leg | 왼쪽 대퇴골 | jLeftHip과 jLeftKnee 조인트에 연결 |
+| Left Lower Leg | 왼족 경골 | jLeftKnee와 jLeftAnkle 조인트에 연결 |
+| Left Foot | 왼발 | jLeftAnkle와 jLeftToe 조인트에 연결 |
+| Left Toe | 왼발가락 | jLeftToe 조인트에 연결 |
+
+#### URDF
 
 ```xml
 <!--URDF MODEL 66 DoFs-->
