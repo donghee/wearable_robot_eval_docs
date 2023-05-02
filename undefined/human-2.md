@@ -65,13 +65,14 @@
   <!--Link base (1)-->
   <!-- 골반 -->
   <link name="Pelvis">
+    <!-- 골반의 질량과 관성모멘트 -->
     <inertial>
       <mass value="4.976"/>
       <!--COM origin wrt pHipOrigin-->
       <origin xyz="0           0    0.049743" rpy="0 0 0" />
       <inertia ixx="0.029678" iyy="0.011854" izz="0.033653" ixy="0" ixz="0" iyz="0"/>
     </inertial>
-
+    <!-- 골반 시각화 -->
     <visual>
       <!--box origin wrt pHipOrigin-->
       <origin xyz="0           0    0.049743" rpy="0 0 0" />
@@ -81,6 +82,7 @@
       <material name="color"/>
     </visual>
 
+    <!-- 골반 충돌 모델 -->
     <collision>
       <!--box origin wrt pHipOrigin-->
       <origin xyz="0           0    0.049743" rpy="0 0 0" />
